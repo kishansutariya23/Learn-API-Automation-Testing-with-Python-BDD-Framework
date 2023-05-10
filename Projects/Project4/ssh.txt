@@ -1,0 +1,4 @@
+- create linux OS on aws ec2 instance
+- connect to ec2 instance it with putty or other tool and by default there will be NO password to instance
+    - so change the setting by watching the 66 video and generate the password
+- install paramiko library in terminal

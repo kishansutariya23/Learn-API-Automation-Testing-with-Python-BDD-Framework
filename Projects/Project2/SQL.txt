@@ -1,0 +1,32 @@
+1) already there is query.sql file present just run it in mysql workbench so all the data gets generated and stored in the sql
+2) install 'pip install mysql-connector-python' in your python env/pycharm
+3) check dbDemo.py file
+4) Don't hardcode the personal info in the code , instead write in some file and call inside the code like properties.ini
+5) simillary connection details also should not be there in code
+   try to keep that in [utilities]-->configuration.py---> def getConnection():conn=mysql.c.c(h........p=')
+   and data/personall data can be written in dictionary
+
+
+structure--> [utilities]-->__init__.py,  configurations.py,  properties.ini,  resources.py
+
+in configuration.py
+write
+
+> import configparser
+
+
+> def getConnection():conn=
+> def getConfig():
+      config = configparser.ConfigParser()
+      config.read('utilities/properties.ini')
+      return config
+// below is dictionary example so it will get information from .ini file with confi method
+> connect_config = {'user':getConfig()['SQL']['user'],....,...,..}
+
+>  def getConncetion():
+        conn.mysql.connector.connect(**connect_config)
+        # use try-catch and print success to know error if any
+
+
+
+    CHECK IN COMPLETEFILE/BACKEND/UTILITIES for clear picture
